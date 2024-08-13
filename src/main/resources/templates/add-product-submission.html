@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Submission Page</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container  align-items-center">
+<h4 class="mt-3 mb-1 text-success"> Added the product details successfully!!</h4>
+<p > Product Name     : <span  th:text="${storedProduct.productName}"></span></p>
+<p> Product Price    : <span  th:text="${storedProduct.productPrice}"></span></p>
+<p> Product Category : <span  th:text="${storedProduct.productCategory}"></span></p>
+<br> <br>
+<p>Click <a th:href="@{ '/' + #{baseURL} }">here</a> for returning to Product Catalog Home Page</p>
+</div>
+</body>
+</html>
+

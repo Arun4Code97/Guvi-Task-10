@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Error Page</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container">
+<h2 class="mt-5 ml-2 mb-2" >Error Details</h2>
+    <p><strong class=" ml-2">Status Code : </strong> <span th:text=" ${statusCode}"></span></p>
+    <p><strong class=" ml-2" >Error Message : </strong> <span th:text=" ${errorMessage}"></span></p>
+    <p class="ml-2">Click <a th:href="@{ '/' + #{baseURL} }">here</a> for returning to Product Catalog Home Page</p>
+</div>
+</body>
+</html>

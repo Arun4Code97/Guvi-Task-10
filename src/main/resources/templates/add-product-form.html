@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container">
+    <h3 class="text-center mt-3 mb-3 "> Product Registration Form</h3>
+    <form  th:object="${newProduct}" th:action="@{/product-catalog/add-product}" method="post">
+        <label>Product Name : </label>
+        <input class="ml-4" type="text" th:field="*{productName}" aria-label="productName"/>
+           <br>
+        <div    th:if="${#fields.hasErrors('productName')}" >
+            <p class="text-danger" th:errors="*{productName}"></p>
+        </div>
+        <br>
+
+        <label class="mr-2">Product Price : </label>
+        <input class="ml-4" type="text" th:field="*{productPrice}" aria-label="productPrice"/>
+         <br>
+        <div    th:if="${#fields.hasErrors('productPrice')}">
+            <p class="text-danger" th:errors="*{productPrice}"></p>
+        </div>
+        <br>
+
+        <label>Product Category : </label>
+        <input class="ml-2" type="text" th:field="*{productCategory}" aria-label="productCategory"/>
+    <br>
+        <div    th:if="${#fields.hasErrors('productCategory')}">
+            <p class="text-danger" th:errors="*{productCategory}"></p>
+        </div> <br>
+        <input class="ml-2 btn btn-secondary" type="submit" value="Add product">
+    </form>
+
+</div>
+
+
+</body>
+</html>

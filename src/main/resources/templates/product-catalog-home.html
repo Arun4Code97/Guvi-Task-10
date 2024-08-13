@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product catalog Home Page</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+
+<body>
+<div class="container">
+    <h3 class="welcome-message">Welcome to Product catalog Management System!!</h3>
+
+    <p class="h6 ml-4 mb-2">Click on <strong> 'Add product'</strong> button to add product to the Catalog  </p>
+    <p class="h6 ml-4 mb-2 ">Click on <strong> 'Display products'</strong> button to display products from the Catalog  </p>
+
+    <nav  class="nav nav-pills mt-3" >
+        <ul class="nav mb-3 ">
+            <li class="nav-item ml-5 ">
+                <a class="nav-link btn btn-primary " th:href="@{| #{baseURL}/add-product |}"> Add product </a>
+            </li>
+            <li class="nav-item  ml-5">
+                <a class="nav-link btn btn-primary "  th:href="@{ #{baseURL} + '/display-all-products' }"> Display products </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+</body>
+</html>
