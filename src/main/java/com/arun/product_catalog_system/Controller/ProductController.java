@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-//@RestController
 @Controller
 @RequestMapping("/product-catalog")
 public class ProductController {
@@ -25,6 +24,7 @@ public class ProductController {
     public String homePage(Model model) {
         return "product-catalog-home";
     }
+
     @GetMapping("/add-product")
     public String handlerMethodForFormRequest(Model model){
         ProductDto newProduct = new ProductDto();
@@ -72,18 +72,3 @@ public class ProductController {
 
 
 }
-
-
-
-//@PostMapping("/add-product")
-//    public ResponseEntity<?> addProduct(@Valid @RequestBody ProductDto newProduct, BindingResult result){
-////Spring Boot validation -> @Valid -> to trigger validation ; BindingResult interface -> to handle validation errors
-//    if(result.hasErrors()){
-//        List<String> validationErrors = result.getAllErrors().stream().map(errorCode -> errorCode.getDefaultMessage()).toList();
-//        ErrorResponse responseErrorDto = new ErrorResponse("validation is failed",validationErrors);
-//        return ResponseEntity.badRequest().body(responseErrorDto);
-//     }
-//
-//     return ResponseEntity.ok(productServices.createProduct(newProduct));
-//    }
-//}

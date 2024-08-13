@@ -16,7 +16,7 @@ public class GlobalExceptionHandler {
     {
        return  new ErrorResponse("HTTP Status Code : 409 Conflict", ex.getMessage());
     }
-//Disabled below exception as already handled all the common errors using ErrorController -/errors
+//Disabled below exception as already handled all the common errors using ErrorController - /errors
 
 //    @ExceptionHandler(Exception.class)
 //    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
