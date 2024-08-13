@@ -8,4 +8,4 @@ Others Included:-<br>
 &nbsp;2.Included seperate Errorcontroller for handling error logic <br>
 &nbsp;3.Used Native Query ,Derived Query(Mathod level Queries) & JPQL Queries
 
-Click <a href="" alt="deployed Url">here </a> for checking the output
+Please find attached output screen recording video
